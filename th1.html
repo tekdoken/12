@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8/>
+    <title>JS Bin</title>
+    <style>
+        body {
+            padding-top: 50px
+        }
+    </style>
+</head>
+
+<body>
+<input id="txt" type="text"/>
+<input id="btnAdd" onclick="addzzz();" type="button" value="Add"/>
+<input id="btnDisplay" onclick="displayzzz();" type="button" value="Display"/>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let a = [];
+
+    function addzzz() {
+        a[x] = document.getElementById('txt').value;
+        alert("Element: " + a[x] + " Added at index " + x);
+        x++;
+        document.getElementById('txt').value = '';
+    }
+
+    let e = '<hr>'
+
+    function displayzzz() {
+        e = '<hr/>'
+        for (let i = 0; i < a.length; i++) {
+            e += "Element " + i + " = " + a[i] + "<br/>";
+        }  document.getElementById("result").innerHTML = e;
+    }
+</script>
+</body>
+</html>
